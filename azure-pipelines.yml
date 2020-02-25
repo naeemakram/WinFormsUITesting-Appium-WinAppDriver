@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  name: 'NMHome'
+  name: 'Default'
 
 variables:
   solution: '**/*.sln'
