@@ -39,3 +39,8 @@ steps:
       !**\*TestAdapter.dll
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
+    
+
+- task: Windows Application Driver@0
+  inputs:
+    OperationType: 'Stop'
