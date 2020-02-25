@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'NMHome'
+  name: 'NMHome'
 
 variables:
   solution: '**/*.sln'
