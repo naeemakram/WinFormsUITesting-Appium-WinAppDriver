@@ -30,7 +30,6 @@ steps:
 - task: Windows Application Driver@0
   inputs:
     OperationType: 'Start'
-
 - task: VSTest@2
   inputs:
     testSelector: 'testAssemblies'
@@ -39,7 +38,8 @@ steps:
       !**\*TestAdapter.dll
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
-    
+    testRunTitle: 'I love you too'
+    configuration: 'Debug'
 
 - task: Windows Application Driver@0
   inputs:
