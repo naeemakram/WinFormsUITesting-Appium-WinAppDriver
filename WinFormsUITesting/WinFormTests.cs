@@ -214,20 +214,20 @@ namespace WinFormsUITesting
 
         }
 
-        //[TestMethod]
-        //public void ListBoxBlindClickFailTest()
-        //{
-        //    //lbStates
-        //    var lbStates = sessionWinForm.FindElementByAccessibilityId("lbStates");
+        [TestMethod]
+        public void ListBoxBlindClickFailTest()
+        {
+            //lbStates
+            var lbStates = sessionWinForm.FindElementByAccessibilityId("lbStates");
 
-        //    var valueToClick = "NC";// this value can be read from a data source like an Excel file. 
+            var valueToClick = "NC";// this value can be read from a data source like an Excel file. 
 
-        //    var listItemToClick = lbStates.FindElementByName(valueToClick);
+            var listItemToClick = lbStates.FindElementByName(valueToClick);
 
-        //    Debug.WriteLine($"{listItemToClick.Displayed} - {listItemToClick.Text}");
+            Debug.WriteLine($"{listItemToClick.Displayed} - {listItemToClick.Text}");
 
-        //    listItemToClick.Click();
-        //}
+            listItemToClick.Click();
+        }
 
 
         [TestMethod]
