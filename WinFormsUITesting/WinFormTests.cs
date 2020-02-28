@@ -84,6 +84,7 @@ namespace WinFormsUITesting
             actsTree.MoveToElement(nodeWorld);
             actsTree.DoubleClick();
             actsTree.Perform();
+			// nothing
         }
 
         [TestMethod]
