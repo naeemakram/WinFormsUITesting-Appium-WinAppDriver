@@ -41,6 +41,10 @@ steps:
     searchFolder: '$(System.DefaultWorkingDirectory)'
     
 
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/TEST-*.xml'
 - task: Windows Application Driver@0
   inputs:
     OperationType: 'Stop'
