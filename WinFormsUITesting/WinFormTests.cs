@@ -227,6 +227,7 @@ namespace WinFormsUITesting
             Debug.WriteLine($"{listItemToClick.Displayed} - {listItemToClick.Text}");
 
             listItemToClick.Click();
+            // update
         }
 
 
