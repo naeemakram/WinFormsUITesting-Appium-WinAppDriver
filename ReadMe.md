@@ -1,0 +1,1 @@
+[![Build Status](https://dev.azure.com/naeem-akram-malik/WinFormsTesting/_apis/build/status/naeemakram.WinFormsUITesting?branchName=master)](https://dev.azure.com/naeem-akram-malik/WinFormsTesting/_build/latest?definitionId=1&branchName=master)
