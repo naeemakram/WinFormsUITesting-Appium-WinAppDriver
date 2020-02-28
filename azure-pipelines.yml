@@ -41,14 +41,6 @@ steps:
     searchFolder: '$(System.DefaultWorkingDirectory)'
     
 
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'VSTest'
-    testResultsFiles: |
-      **/TEST-*.xml
-      **/*.trx
-    testRunTitle: 'Running tests via Azure DevOps'
-
 - task: Windows Application Driver@0
   inputs:
     OperationType: 'Stop'
