@@ -215,7 +215,7 @@ namespace WinFormsUITesting
 
         }
 
-        [TestMethod]
+        //[TestMethod]
         public void ListBoxBlindClickFailTest()
         {
             //lbStates
