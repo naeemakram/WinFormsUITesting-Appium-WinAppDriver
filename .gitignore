@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Outlook2019AutomationWinAppDriver/v16
+/Outlook2019AutomationWinAppDriver/obj/Debug
+/Outlook2019AutomationWinAppDriver/bin/Debug
+/packages

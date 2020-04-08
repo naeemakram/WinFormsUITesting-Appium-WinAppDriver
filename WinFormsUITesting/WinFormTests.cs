@@ -35,10 +35,20 @@ namespace WinFormsUITesting
 
             Thread.Sleep(1000);
 
-            //sessionWinForm.FindElementByXPath
-            //    ("/Pane[@Name=\"Desktop 1\"][@ClassName=\"#32769\"]/Window[starts-with(@AutomationId,\"Form\")][@Name=\"Do Not Distrurb Mortgage Calculator From 1999 v20.8.2.1b\"]/Window[@Name=\"Alert\"][@ClassName=\"#32770\"]/Button[@Name=\"OK\"][@ClassName=\"Button\"]")
-            //    .Click()
-            //    ;
+            var appiumOptionsDesktop = new AppiumOptions();
+            appiumOptionsDesktop.AddAdditionalCapability("app", "Root");
+
+            var sessionDesktop = new WindowsDriver<WindowsElement>(new Uri("http://127.0.0.1:4723"), appiumOptionsDesktop);
+
+            sessionDesktop.FindElementByXPath
+            ("/Pane[@Name =\"Desktop 1\"][@ClassName=\"#32769\"]/Window[starts-with(@AutomationId,\"Form\")]" +
+            "[@Name=\"Do Not Distrurb Mortgage Calculator From 1999 v20.8.2.1b\"]/Window[@Name=\"Alert\"]" +
+            "/Button[@Name=\"OK\"][@ClassName=\"Button\"]")            
+            .Click();
+
+            sessionWinForm.FindElementByName("OpenMessageStrip").Click();
+
+            Thread.Sleep(1000);
 
             sessionWinForm.FindElementByName("Alert").FindElementByName("OK").Click();
 
@@ -313,6 +323,23 @@ namespace WinFormsUITesting
                 }
 
             }
+
+        }
+
+        [TestMethod]
+        public void SliderTest()
+        {
+            var slider = sessionWinForm.FindElementByAccessibilityId("trackSlider");
+            var thumb = slider.FindElementByName("Position");
+            var btnCalculate = sessionWinForm.FindElementByName("Calculate ");
+
+            Actions actDrag = new Actions(sessionWinForm);            
+            //actDrag.DragAndDrop(thumb, btnCalculate);// to/from example, move way away from start                        
+            //actDrag.DragAndDropToOffset(thumb, 0, 0);// move back to zero
+            actDrag.DragAndDropToOffset(thumb, offsetX: slider.Rect.Width/2, 0);// slide half            
+            //actDrag.Release();
+            actDrag.Perform();
+
 
         }
 
