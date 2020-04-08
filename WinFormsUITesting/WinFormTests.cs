@@ -52,6 +52,7 @@ namespace WinFormsUITesting
 
             sessionWinForm.FindElementByName("Alert").FindElementByName("OK").Click();
 
+		// just messin!!!
         }
 
         [TestMethod]
@@ -225,7 +226,7 @@ namespace WinFormsUITesting
 
         }
 
-        [TestMethod]
+        //[TestMethod]
         public void ListBoxBlindClickFailTest()
         {
             //lbStates
